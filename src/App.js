@@ -189,7 +189,8 @@ export default function App() {
   }
 
   // ── upload CSV files ──
-  const processFiles = useCallback((files) => {
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+const processFiles = useCallback((files) => {
     const existingFiles = new Set(allRows.map(r => r.source_file));
     const dupeFiles = [];
 
