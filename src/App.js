@@ -1,5 +1,6 @@
 import { useState, useCallback, useRef } from "react";
 import Papa from "papaparse";
+import { Analytics } from "@vercel/analytics/react";
 
 const EXPECTED_COLUMNS = [
   "source_file", "serial_no", "epic_id", "name",
@@ -513,6 +514,7 @@ export default function App() {
           </div>
         )}
       </div>
+      <Analytics />
     </div>
   );
 }
